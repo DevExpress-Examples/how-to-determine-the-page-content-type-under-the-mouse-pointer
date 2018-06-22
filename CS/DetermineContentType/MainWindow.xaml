@@ -1,0 +1,27 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+         xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+        xmlns:local="clr-namespace:DetermineContentType"
+        xmlns:dxpdf="http://schemas.devexpress.com/winfx/2008/xaml/pdf" x:Class="DetermineContentType.MainWindow"
+        mc:Ignorable="d"
+        Title="PDF Viewer" Height="350" Width="525">
+    <Grid>
+        <dxpdf:PdfViewerControl x:Name="viewer" MouseMove="viewer_MouseMove"  >
+            <dxpdf:PdfViewerControl.CommandProvider>
+                <dxpdf:PdfCommandProvider>
+                    <dxpdf:PdfCommandProvider.RibbonActions>
+                        <dxr:InsertRibbonPageGroupAction PageName="{x:Static dxpdf:DefaultPdfBarManagerItemNames.MainRibbonPage}" Index="4">
+                            <dxr:RibbonPageGroup Caption="Content Type">
+                                <dxb:BarButtonItem x:Name="barButtonItem"/>
+                            </dxr:RibbonPageGroup>
+                        </dxr:InsertRibbonPageGroupAction>
+                    </dxpdf:PdfCommandProvider.RibbonActions>
+                </dxpdf:PdfCommandProvider>
+            </dxpdf:PdfViewerControl.CommandProvider>
+        </dxpdf:PdfViewerControl>
+    </Grid>
+</Window>
