@@ -1,24 +1,11 @@
-#  How to specify the text markup annotation properties when the annotation is being created
+#  How to determine the page content type under the mouse pointer 
 
 
-<p>This example demonstrates how to specify the text markup annotation properties when the annotation is being created in a document.</p>
-<p>To add a markup to text:</p>
+<p>This example illustrates how to use the <a href="https://documentation.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfViewerControl.HitTest.method">PdfViewerControl.HitTest</a>  method to determine the type of the page content under the mouse pointer.</p>
 
-* Select the text; 
-* Right-click the text and choose <strong>Highlight</strong>, <strong>Strikethrough</strong> or <strong>Underline</strong> item in the invoked context menu. 
+<p>This method returns a <a href="https://documentation.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfHitTestResult.class">PdfHitTestResult</a> instance with information about the page content type (text, an image or annotation). You can get the page content type using the <a href="https://documentation.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfHitTestResult.ContentType.property">ContentType</a>  property and the page content selection status using the <a href="https://documentation.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfHitTestResult.IsSelected.property">IsSelected</a> property. </p>
 
-![](https://github.com/DevExpress-Examples/how-to-specify-text-markup-annotation-properties-when-the-annotation-is-being-created/blob/18.1.3%2B/Media/MarkupContextMenu.png)
+<p>In this example, the retrieved information is shown on the <strong>Content Type</strong> ribbon page group. </p>
 
-<p>When the text markup annotation is being created in a document, the <a href="https://documentation.devexpress.com/WindowsForms/DevExpress.XtraPdfViewer.PdfViewer.TextMarkupAnnotationCreating.event">PdfViewer.TextMarkupAnnotationCreating</a> event is raised. In this event, you can specify the annotation properties (for example, the default color used to underline a text using the <a href="https://documentation.devexpress.com/WindowsForms/DevExpress.XtraPdfViewer.PdfTextMarkupAnnotationCreatingEventArgs.Color.property">PdfTextMarkupAnnotationCreatingEventArgs.Color</a> property).</p> 
-
-<p>You can see properties applied to a newly created annotation in the <strong>Annotation Properties</strong> dialog.</p>
-
-<p>To open this dialog, right-click the annotation and choose the <strong>Properties…</strong> item in the context menu.</p> 
-
-![](https://github.com/DevExpress-Examples/how-to-specify-text-markup-annotation-properties-when-the-annotation-is-being-created/blob/18.1.3%2B/Media/InvokeAnnotationProperties.png)
-
-<p>The <strong>Annotation Properties</strong> dialog is shown below.</p>
-
-![](https://github.com/DevExpress-Examples/how-to-specify-text-markup-annotation-properties-when-the-annotation-is-being-created/blob/18.1.3%2B/Media/AnnotationPropertiesShowResult.png)
-
+<p>Call the <a href="https://documentation.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfViewerControl.HitTest.method">PdfViewerControl.HitTest</a>  method in the <strong>PdfViewerControl.MouseMove</strong> event handler to perform hit testing. </p>
 <br/>
