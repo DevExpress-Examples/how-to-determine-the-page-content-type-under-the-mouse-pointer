@@ -6,16 +6,16 @@
 <!-- default badges end -->
 #  How to determine the page content type under the mouse pointer 
 
+This example uses the [PdfViewerControl.HitTest](https://docs.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfViewerControl.HitTest(System.Windows.Point)) method to determine the type of the page content under the mouse pointer.
 
-<p>This example illustrates how to use the <a href="https://documentation.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfViewerControl.HitTest.method">PdfViewerControl.HitTest</a>  method to determine the type of the page content under the mouse pointer.</p>
+This method returns a [PdfHitTestResult](https://docs.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfHitTestResult) instance with information about the page content type (text, an image or annotation). You can get the page content type using the [ContentType](https://docs.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfHitTestResult.ContentType) property and the page content selection status using the [IsSelected](https://docs.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfHitTestResult.IsSelected) property.
 
-<p>This method returns a <a href="https://documentation.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfHitTestResult.class">PdfHitTestResult</a> instance with information about the page content type (text, an image or annotation). You can get the page content type using the <a href="https://documentation.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfHitTestResult.ContentType.property">ContentType</a>  property and the page content selection status using the <a href="https://documentation.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfHitTestResult.IsSelected.property">IsSelected</a> property. </p>
+In this example, the retrieved information is shown on the **Content Type** ribbon page group.
 
-<p>In this example, the retrieved information is shown on the <strong>Content Type</strong> ribbon page group. </p>
+Call the [PdfViewerControl.HitTest](https://docs.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfViewerControl.HitTest(System.Windows.Point)) method in the `PdfViewerControl.MouseMove` event handler to perform hit testing.
 
-<p>Call the <a href="https://documentation.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfViewerControl.HitTest.method">PdfViewerControl.HitTest</a>  method in the <strong>PdfViewerControl.MouseMove</strong> event handler to perform hit testing. </p>
-<br/>
 <!-- feedback -->
+
 ## Does this example address your development requirements/objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-determine-the-page-content-type-under-the-mouse-pointer&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-determine-the-page-content-type-under-the-mouse-pointer&~~~was_helpful=no)
