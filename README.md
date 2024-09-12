@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-#  How to determine the page content type under the mouse pointer 
+#  PDF Viewer for WPF - Determine the page content type under the mouse pointer 
 
 This example uses the [PdfViewerControl.HitTest](https://docs.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfViewerControl.HitTest(System.Windows.Point)) method to determine the type of the page content under the mouse pointer.
 
