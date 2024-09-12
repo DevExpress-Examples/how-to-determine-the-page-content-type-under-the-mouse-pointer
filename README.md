@@ -15,7 +15,6 @@ In this example, the retrieved information is shown on the **Content Type** ribb
 Call the [PdfViewerControl.HitTest](https://docs.devexpress.com/WPF/DevExpress.Xpf.PdfViewer.PdfViewerControl.HitTest(System.Windows.Point)) method in the `PdfViewerControl.MouseMove` event handler to perform hit testing.
 
 <!-- feedback -->
-
 ## Does this example address your development requirements/objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-determine-the-page-content-type-under-the-mouse-pointer&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-determine-the-page-content-type-under-the-mouse-pointer&~~~was_helpful=no)
